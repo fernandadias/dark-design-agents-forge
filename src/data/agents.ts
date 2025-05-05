@@ -2,6 +2,19 @@
 import { YoutubeIcon, BarChart, MessagesSquare, Mail, Megaphone, FileText, Users } from 'lucide-react';
 import { Agent } from '@/types/Agent';
 
+// Helper function to create icon mapping
+const createIconMap = () => {
+  return {
+    youtube: { component: YoutubeIcon, size: 16 },
+    marketing: { component: BarChart, size: 16 },
+    copywriting: { component: MessagesSquare, size: 16 },
+    emails: { component: Mail, size: 16 },
+    anuncios: { component: Megaphone, size: 16 },
+    conteudo: { component: FileText, size: 16 },
+    cliente: { component: Users, size: 16 }
+  };
+};
+
 // Exportando os agentes para serem usados em outros componentes
 export const initialAgents: Agent[] = [
   {
@@ -10,7 +23,7 @@ export const initialAgents: Agent[] = [
     description: 'Transforme uma ideia sem graça em um vídeo impossível de ignorar.',
     category: 'youtube',
     categoryName: 'YouTube',
-    icon: <YoutubeIcon size={16} />,
+    icon: YoutubeIcon,
     locked: false,
     isNew: false,
     favorite: true
@@ -21,7 +34,7 @@ export const initialAgents: Agent[] = [
     description: 'Crie posts de perguntas instigantes e persuasivas para Facebook, focadas em identificar e qualificar clientes.',
     category: 'anuncios',
     categoryName: 'Anúncios',
-    icon: <Megaphone size={16} />,
+    icon: Megaphone,
     locked: false,
     isNew: false,
     favorite: false
@@ -32,7 +45,7 @@ export const initialAgents: Agent[] = [
     description: 'Crie uma Premissa Persuasiva ao descobrir quais são as Crenças do seu cliente para capturar sua atenção.',
     category: 'marketing',
     categoryName: 'Marketing',
-    icon: <BarChart size={16} />,
+    icon: BarChart,
     locked: false,
     isNew: true,
     favorite: false
@@ -43,7 +56,7 @@ export const initialAgents: Agent[] = [
     description: 'Crie anúncios altamente persuasivos para capturar a atenção, resolver crenças limitantes e gerar conversões.',
     category: 'anuncios',
     categoryName: 'Anúncios',
-    icon: <Megaphone size={16} />,
+    icon: Megaphone,
     locked: false,
     isNew: false,
     favorite: false
@@ -54,7 +67,7 @@ export const initialAgents: Agent[] = [
     description: 'Use a "bússola" para encontrar melhores clientes que pagam mais e que se encaixam com você e seu negócio.',
     category: 'marketing',
     categoryName: 'Marketing',
-    icon: <BarChart size={16} />,
+    icon: BarChart,
     locked: false,
     isNew: false,
     favorite: false
@@ -65,7 +78,7 @@ export const initialAgents: Agent[] = [
     description: 'Crie uma descrição otimizada para SEO com base na transcrição do seu vídeo.',
     category: 'youtube',
     categoryName: 'YouTube',
-    icon: <YoutubeIcon size={16} />,
+    icon: YoutubeIcon,
     locked: false,
     isNew: false,
     favorite: false
@@ -76,7 +89,7 @@ export const initialAgents: Agent[] = [
     description: 'Edite e revise e-mails para corrigir erros, ficar melhor, claro, vender mais.',
     category: 'emails',
     categoryName: 'E-mails',
-    icon: <Mail size={16} />,
+    icon: Mail,
     locked: true,
     isNew: false,
     favorite: false
@@ -87,7 +100,7 @@ export const initialAgents: Agent[] = [
     description: 'Crie um funil completo de anúncios que vão desde a descoberta até o retorno e a conversão final.',
     category: 'anuncios',
     categoryName: 'Anúncios',
-    icon: <Megaphone size={16} />,
+    icon: Megaphone,
     locked: false,
     isNew: true,
     favorite: false
@@ -98,7 +111,7 @@ export const initialAgents: Agent[] = [
     description: 'Como criar hooks curtos de até 8 segundos para garantir que você tenha a atenção do seu público.',
     category: 'copywriting',
     categoryName: 'Copywriting',
-    icon: <MessagesSquare size={16} />,
+    icon: MessagesSquare,
     locked: false,
     isNew: false,
     favorite: false
@@ -109,7 +122,7 @@ export const initialAgents: Agent[] = [
     description: 'Como gerar ideias para conteúdos que atraem o tipo de cliente certo, que compra e paga bem pelo seu trabalho.',
     category: 'conteudo',
     categoryName: 'Conteúdo',
-    icon: <FileText size={16} />,
+    icon: FileText,
     locked: false,
     isNew: false,
     favorite: false
@@ -120,7 +133,7 @@ export const initialAgents: Agent[] = [
     description: 'Gere ideias com a maior chance de compartilhamento que podem ser usadas em várias plataformas.',
     category: 'conteudo',
     categoryName: 'Conteúdo',
-    icon: <FileText size={16} />,
+    icon: FileText,
     locked: true,
     isNew: false,
     favorite: false
@@ -131,9 +144,12 @@ export const initialAgents: Agent[] = [
     description: 'Como criar a metodologia ideal para ensinar melhor, se diferenciar e também vender mais.',
     category: 'cliente',
     categoryName: 'Cliente',
-    icon: <Users size={16} />,
+    icon: Users,
     locked: false,
     isNew: false,
     favorite: false
   }
 ];
+
+// Export the icon map for use in components
+export const iconMap = createIconMap();

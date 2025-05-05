@@ -1,5 +1,5 @@
 
-import { ReactNode } from 'react';
+import { LucideIcon } from 'lucide-react';
 
 export interface Agent {
   id: string;
@@ -7,7 +7,7 @@ export interface Agent {
   description: string;
   category: string;
   categoryName: string;
-  icon: ReactNode;
+  icon: LucideIcon;
   locked: boolean;
   isNew: boolean;
   favorite: boolean;

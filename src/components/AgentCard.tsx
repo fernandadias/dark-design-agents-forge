@@ -18,6 +18,8 @@ const AgentCard: React.FC<AgentCardProps> = ({ agent, onToggleFavorite }) => {
     onToggleFavorite(agent.id);
   };
 
+  const Icon = agent.icon;
+
   return (
     <Link 
       to={agent.locked ? "#" : `/agent/${agent.id}`}
@@ -56,7 +58,7 @@ const AgentCard: React.FC<AgentCardProps> = ({ agent, onToggleFavorite }) => {
             "h-8 w-8 rounded-md flex items-center justify-center",
             `bg-category-${agent.category}/10 text-category-${agent.category}`
           )}>
-            {agent.icon}
+            <Icon size={16} />
           </div>
           <div className={cn(
             "category-badge",
